@@ -1,171 +1,409 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#082c55">
-<title>Bengkel Jaya Perkasa - Spesialis Kaki-Kaki</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#f3f7fc;color:#18314b;line-height:1.6}
-header{background:#082c55;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.logo{font-weight:bold;font-size:19px}
-.logo span{color:#50baff}
-nav a{color:white;text-decoration:none;margin:0 9px;font-size:14px}
-.hero{padding:85px 7%;background:linear-gradient(120deg,#082c55,#1266a8);color:white;text-align:center}
-.hero h1{font-size:clamp(32px,6vw,52px);line-height:1.2;margin-bottom:15px}
-.hero h2{color:#65c3ff;font-size:23px;margin-bottom:12px}
-.hero p{max-width:650px;margin:0 auto 25px;color:#e1efff}
-.btn{display:inline-block;background:#0ba5e9;color:white;padding:13px 23px;border-radius:8px;text-decoration:none;font-weight:bold;margin:5px;border:0;cursor:pointer}
-.btn.white{background:white;color:#082c55}
-section{padding:60px 7%}
-.heading{text-align:center;margin-bottom:32px}
-.heading h2{font-size:29px;color:#082c55}
-.heading p{color:#687e94}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
-.card{background:white;padding:24px;border-radius:13px;box-shadow:0 5px 20px #082c5510}
-.card h3{color:#0b4e83;margin:10px 0}
-.icon{font-size:35px}
-.highlight{background:#e4f1ff}
-.callout{background:#092e54;color:white;text-align:center}
-.callout h2{font-size:30px}
-.callout p{color:#d8eaff;margin:12px auto;max-width:600px}
-.hours{max-width:540px;margin:auto;background:white;color:#173653;padding:25px;border-radius:13px;text-align:left}
-.hourrow{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #e5edf5;gap:12px}
-.contact{background:#edf5fd;text-align:center}
-footer{background:#061c34;color:#d3e3f3;text-align:center;padding:23px;font-size:13px}
-#waPanel{display:none;position:fixed;right:18px;bottom:85px;width:min(320px,calc(100vw - 36px));background:white;padding:20px;border-radius:15px;box-shadow:0 5px 30px #001c3850;z-index:10}
-#waPanel h3{color:#082c55;margin-bottom:10px}
-#waPanel a{display:block;text-decoration:none;color:#087b48;padding:11px;border-bottom:1px solid #e7edf3;font-weight:bold}
-#waPanel a:hover{background:#effaf4}
-.floating{position:fixed;right:18px;bottom:18px;background:#12b96a;color:white;border:0;border-radius:30px;padding:15px 21px;font-weight:bold;box-shadow:0 4px 15px #0003;cursor:pointer;z-index:11}
-@media(max-width:600px){
- header{justify-content:center;text-align:center}
- nav{width:100%}
- nav a{margin:0 6px}
- section{padding:45px 6%}
- .hero{padding:65px 6%}
- .hourrow{font-size:14px}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#082c55">
+  <meta name="description" content="Bengkel Jaya Perkasa di Pengasinan, Bekasi Timur. Melayani servis mobil, motor, spesialis kaki-kaki, ganti oli, tune up, dan servis panggilan dengan konfirmasi WhatsApp.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bengkel Jaya Perkasa | Spesialis Kaki-Kaki Mobil">
+  <meta property="og:description" content="Layanan servis mobil dan motor di Pengasinan, Bekasi Timur. Hubungi admin kami melalui WhatsApp.">
+  <title>Bengkel Jaya Perkasa | Spesialis Kaki-Kaki Mobil Bekasi Timur</title>
+  <style>
+    :root {
+      --navy: #082c55;
+      --navy-2: #0b4e83;
+      --blue: #1266a8;
+      --orange: #0ba5e9;
+      --orange-dark: #087fbd;
+      --ink: #17283b;
+      --muted: #64748b;
+      --paper: #f3f7fc;
+      --white: #fff;
+      --line: #e5eaf0;
+      --shadow: 0 18px 50px rgba(7, 27, 51, .10);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body { font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--white); line-height: 1.65; }
+    a { color: inherit; }
+    button { font: inherit; }
+    .container { width: min(1120px, 88%); margin-inline: auto; }
+    .topbar { background: #061c34; color: #dbe7f5; font-size: 12px; padding: 8px 0; }
+    .topbar-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .site-header { position: sticky; top: 0; z-index: 20; background: rgba(7,27,51,.97); color: white; box-shadow: 0 5px 20px #06172a25; }
+    .nav-wrap { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; font-weight: 900; letter-spacing: .3px; line-height: 1.15; }
+    .brand-mark { width: 42px; height: 42px; display: grid; place-items: center; background: var(--orange); color: var(--navy); border-radius: 12px; font-size: 22px; }
+    .brand-name { font-size: 15px; }
+    .brand-name span { display: block; color: #65c3ff; }
+    .nav-links { display: flex; align-items: center; gap: 26px; }
+    .nav-links a { text-decoration: none; color: #e4edf7; font-size: 13px; font-weight: 700; transition: color .2s; }
+    .nav-links a:hover { color: #65c3ff; }
+    .nav-cta { background: var(--orange); color: var(--navy) !important; padding: 11px 16px; border-radius: 9px; }
+    .menu-toggle { display: none; border: 1px solid #ffffff45; color: white; background: transparent; padding: 8px 11px; border-radius: 8px; cursor: pointer; }
+    .hero { position: relative; overflow: hidden; color: white; padding: 94px 0 100px; background: radial-gradient(circle at 85% 20%, #1765a5 0, transparent 32%), linear-gradient(120deg, #06172b, #0b4e83 70%, #123d64); }
+    .hero::after { content: ""; position: absolute; width: 380px; height: 380px; border: 1px solid #ffffff18; border-radius: 50%; right: -120px; bottom: -230px; box-shadow: 0 0 0 35px #ffffff08, 0 0 0 75px #ffffff05; }
+    .hero-content { position: relative; z-index: 1; max-width: 760px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: #65c3ff; text-transform: uppercase; letter-spacing: 2px; font-size: 11px; font-weight: 800; margin-bottom: 18px; }
+    .eyebrow::before { content: ""; width: 25px; height: 2px; background: var(--orange); }
+    h1 { font-size: clamp(38px, 6vw, 66px); line-height: 1.08; letter-spacing: -1.8px; margin-bottom: 17px; }
+    h1 span { color: #65c3ff; }
+    .hero h2 { color: #e1efff; font-size: clamp(18px, 2.5vw, 24px); margin-bottom: 14px; }
+    .hero p { color: #d8eaff; max-width: 620px; font-size: 16px; margin-bottom: 28px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; justify-content: center; align-items: center; gap: 9px; border: 0; border-radius: 9px; padding: 13px 20px; text-decoration: none; font-weight: 800; font-size: 14px; cursor: pointer; transition: transform .2s, background .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-orange { background: var(--orange); color: var(--navy); }
+    .btn-orange:hover { background: #50baff; }
+    .btn-outline { border: 1px solid #ffffff70; color: white; background: transparent; }
+    .btn-dark { background: var(--navy); color: white; }
+    .trust-strip { background: #fff; border-bottom: 1px solid var(--line); }
+    .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .trust-item { padding: 22px 16px; text-align: center; border-right: 1px solid var(--line); }
+    .trust-item:last-child { border: 0; }
+    .trust-item strong { display: block; color: var(--navy); font-size: 14px; }
+    .trust-item span { color: var(--muted); font-size: 12px; }
+    section { padding: 78px 0; }
+    .section-head { max-width: 650px; margin: 0 auto 38px; text-align: center; }
+    .section-kicker { color: var(--orange-dark); text-transform: uppercase; letter-spacing: 1.8px; font-size: 11px; font-weight: 900; }
+    .section-head h2 { color: var(--navy); font-size: clamp(27px, 4vw, 38px); line-height: 1.2; margin: 8px 0 12px; }
+    .section-head p { color: var(--muted); font-size: 15px; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; align-items: center; }
+    .about-visual { min-height: 330px; border-radius: 22px; background: linear-gradient(145deg, #0b2745, #1266a8); display: grid; place-items: center; position: relative; overflow: hidden; box-shadow: var(--shadow); }
+    .about-visual::before, .about-visual::after { content: ""; position: absolute; border: 1px solid #ffffff20; border-radius: 50%; width: 260px; height: 260px; }
+    .about-visual::after { width: 340px; height: 340px; }
+    .visual-icon { position: relative; z-index: 1; font-size: 92px; filter: drop-shadow(0 12px 15px #0005); }
+    .visual-label { position: absolute; bottom: 22px; left: 24px; color: #dceafa; font-size: 12px; letter-spacing: 1.5px; font-weight: 800; }
+    .about-copy .section-kicker { display: block; margin-bottom: 9px; }
+    .about-copy h2 { color: var(--navy); font-size: clamp(27px, 4vw, 36px); line-height: 1.2; margin-bottom: 16px; }
+    .about-copy p { color: var(--muted); margin-bottom: 14px; }
+    .check-list { list-style: none; display: grid; gap: 10px; margin-top: 20px; }
+    .check-list li { display: flex; gap: 10px; align-items: flex-start; font-weight: 700; font-size: 14px; }
+    .check-list li::before { content: "✓"; display: grid; place-items: center; flex: 0 0 22px; height: 22px; border-radius: 50%; color: #17643d; background: #e3f5eb; font-size: 12px; }
+    .services { background: var(--paper); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .service-card { background: white; border: 1px solid #edf0f4; padding: 27px 24px; border-radius: var(--radius); box-shadow: 0 8px 24px #082c5508; transition: transform .2s, box-shadow .2s; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .service-icon { width: 52px; height: 52px; display: grid; place-items: center; background: #e4f1ff; border-radius: 14px; font-size: 26px; margin-bottom: 17px; }
+    .service-card h3 { color: var(--navy); font-size: 17px; margin-bottom: 8px; }
+    .service-card p { color: var(--muted); font-size: 13px; }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .why-card { padding: 24px; border-left: 3px solid var(--orange); background: #f8fafc; border-radius: 0 12px 12px 0; }
+    .why-card h3 { color: var(--navy); font-size: 16px; margin-bottom: 7px; }
+    .why-card p { color: var(--muted); font-size: 13px; }
+    .hours-section { background: #e4f1ff; }
+    .hours-box { max-width: 650px; margin: auto; background: white; padding: 28px 32px; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .hour-row { display: flex; justify-content: space-between; gap: 16px; padding: 13px 0; border-bottom: 1px solid var(--line); }
+    .hour-row:last-of-type { border-bottom: 0; }
+    .hour-row strong { color: var(--navy); font-size: 14px; }
+    .hour-row span { color: var(--muted); font-size: 14px; }
+    .hours-note { background: #e4f1ff; color: #0b4e83; border-radius: 10px; padding: 13px 15px; font-size: 13px; margin-top: 18px; }
+    .faq-list { max-width: 780px; margin: auto; display: grid; gap: 11px; }
+    .faq-item { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+    .faq-item summary { list-style: none; cursor: pointer; padding: 17px 20px; color: var(--navy); font-weight: 800; font-size: 14px; display: flex; justify-content: space-between; gap: 15px; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: "+"; color: var(--orange-dark); font-size: 20px; line-height: 1; }
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-answer { padding: 0 20px 18px; color: var(--muted); font-size: 13px; }
+    .emergency { background: linear-gradient(110deg, #082c55, #1266a8); color: white; text-align: center; padding: 58px 0; }
+    .emergency h2 { font-size: clamp(25px, 4vw, 35px); margin-bottom: 9px; }
+    .emergency p { color: #d0deed; max-width: 620px; margin: 0 auto 22px; font-size: 14px; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .contact-card { background: white; border: 1px solid var(--line); border-radius: var(--radius); padding: 27px; }
+    .contact-card h3 { color: var(--navy); margin-bottom: 8px; }
+    .contact-card p { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+    .contact-icon { font-size: 27px; margin-bottom: 10px; }
+    .site-footer { background: #061c34; color: #c4d2e1; padding: 35px 0 22px; }
+    .footer-main { display: flex; justify-content: space-between; align-items: flex-start; gap: 30px; flex-wrap: wrap; padding-bottom: 25px; }
+    .footer-main p { max-width: 400px; color: #91a6bc; font-size: 13px; margin-top: 12px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 17px; }
+    .footer-links a { color: #dce7f2; text-decoration: none; font-size: 13px; }
+    .footer-bottom { border-top: 1px solid #ffffff1c; padding-top: 17px; font-size: 11px; color: #8fa3b8; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    #waPanel { display: none; position: fixed; right: 20px; bottom: 88px; width: min(340px, calc(100vw - 32px)); background: white; padding: 21px; border-radius: 16px; box-shadow: 0 15px 50px #00152d45; z-index: 40; border: 1px solid var(--line); }
+    #waPanel h3 { color: var(--navy); margin-bottom: 3px; }
+    #waPanel p { color: var(--muted); font-size: 12px; margin-bottom: 10px; }
+    #waPanel a { display: block; color: #087b48; text-decoration: none; padding: 11px 8px; border-bottom: 1px solid var(--line); font-size: 13px; font-weight: 800; }
+    #waPanel a:hover { background: #f0faf4; }
+    .panel-close { width: 100%; margin-top: 14px; }
+    .floating { position: fixed; right: 20px; bottom: 20px; z-index: 35; border: 0; border-radius: 30px; background: #12ad65; color: white; padding: 14px 19px; font-weight: 800; cursor: pointer; box-shadow: 0 6px 20px #00152d40; }
+    .floating:hover { background: #0c9656; }
+    :focus-visible { outline: 3px solid #65c3ff; outline-offset: 3px; }
+    @media (max-width: 800px) {
+      .nav-wrap { min-height: 68px; }
+      .menu-toggle { display: inline-block; }
+      .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; background: var(--navy); padding: 15px 6% 20px; flex-direction: column; align-items: stretch; gap: 0; border-top: 1px solid #ffffff20; }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 4px; }
+      .nav-cta { text-align: center; margin-top: 7px; }
+      .about-grid { grid-template-columns: 1fr; gap: 30px; }
+      .about-visual { min-height: 250px; }
+      .cards { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .container { width: 90%; }
+      .topbar-inner { justify-content: center; text-align: center; }
+      .hero { padding: 72px 0 76px; }
+      h1 { letter-spacing: -1px; }
+      .hero p { font-size: 14px; }
+      section { padding: 58px 0; }
+      .trust-grid { grid-template-columns: 1fr; }
+      .trust-item { border-right: 0; border-bottom: 1px solid var(--line); padding: 14px; }
+      .trust-item:last-child { border-bottom: 0; }
+      .cards { grid-template-columns: 1fr; }
+      .hours-box { padding: 20px; }
+      .hour-row { align-items: flex-start; }
+      .hour-row strong, .hour-row span { font-size: 12px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .hero-actions .btn { width: 100%; }
+      .footer-bottom { justify-content: center; text-align: center; }
+      .floating { right: 14px; bottom: 14px; padding: 12px 16px; }
+      #waPanel { right: 14px; bottom: 76px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
 </head>
 <body>
-
-<header>
- <div class="logo">🔧 BENGKEL <span>JAYA PERKASA</span></div>
- <nav>
-  <a href="#home">Home</a>
-  <a href="#layanan">Layanan</a>
-  <a href="#jam">Jam Buka</a>
-  <a href="#kontak">Kontak</a>
- </nav>
-</header>
-
-<main>
-<section class="hero" id="home">
- <h1>BENGKEL JAYA PERKASA</h1>
- <h2>Spesialis Kaki-Kaki Mobil</h2>
- <p>Melayani berbagai jenis kerusakan mobil, servis motor, dan layanan servis panggilan 24 jam. Siap membantu kebutuhan kendaraan Anda!</p>
- <a href="#layanan" class="btn white">Lihat Layanan</a>
- <button class="btn" onclick="toggleWA()">💬 Hubungi Admin</button>
-</section>
-
-<section id="layanan">
- <div class="heading">
-  <h2>Layanan Bengkel Kami</h2>
-  <p>Solusi perawatan dan perbaikan kendaraan Anda.</p>
- </div>
- <div class="cards">
-  <div class="card">
-   <div class="icon">🚗</div>
-   <h3>Servis Mobil</h3>
-   <p>Menerima perbaikan berbagai jenis kerusakan mobil.</p>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>📍 Pengasinan, Bekasi Timur</span>
+      <span>Servis panggilan: konfirmasi ketersediaan melalui WhatsApp</span>
+    </div>
   </div>
-  <div class="card">
-   <div class="icon">🔧</div>
-   <h3>Spesialis Kaki-Kaki</h3>
-   <p>Fokus pada pemeriksaan dan perbaikan bagian kaki-kaki mobil.</p>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Bengkel Jaya Perkasa - Beranda">
+        <span class="brand-mark">🔧</span>
+        <span class="brand-name">BENGKEL <span>JAYA PERKASA</span></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="navLinks">☰ Menu</button>
+      <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+        <a href="#home">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#jam">Jam Operasional</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontak" class="nav-cta">Hubungi Kami</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Bengkel Mobil & Motor · Bekasi Timur</div>
+          <h1>Rawat Kendaraan,<br><span>Percayakan pada Kami.</span></h1>
+          <h2>Spesialis Kaki-Kaki Mobil</h2>
+          <p>Bengkel Jaya Perkasa melayani servis mobil, servis motor, pemeriksaan kaki-kaki, ganti oli, tune up, dan layanan servis panggilan.</p>
+          <div class="hero-actions">
+            <a class="btn btn-orange" href="#layanan">Lihat Layanan <span aria-hidden="true">→</span></a>
+            <button class="btn btn-outline" type="button" onclick="toggleWA(true)">💬 Hubungi Admin</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item"><strong>Spesialis Kaki-Kaki</strong><span>Fokus pemeriksaan dan perbaikan</span></div>
+        <div class="trust-item"><strong>Mobil & Motor</strong><span>Layanan perawatan kendaraan</span></div>
+        <div class="trust-item"><strong>Pengasinan, Bekasi Timur</strong><span>Lokasi bengkel</span></div>
+      </div>
+    </div>
+
+    <section id="tentang">
+      <div class="container about-grid">
+        <div class="about-visual" aria-label="Ilustrasi peralatan bengkel">
+          <div class="visual-icon" aria-hidden="true">🛠️</div>
+          <div class="visual-label">BENGKEL JAYA PERKASA</div>
+        </div>
+        <div class="about-copy">
+          <span class="section-kicker">Tentang Kami</span>
+          <h2>Solusi perawatan kendaraan Anda.</h2>
+          <p>Bengkel Jaya Perkasa berlokasi di Pengasinan, Bekasi Timur. Kami melayani kebutuhan servis dan perawatan mobil maupun motor, dengan fokus layanan pada pemeriksaan dan perbaikan kaki-kaki mobil.</p>
+          <p>Untuk kebutuhan servis panggilan, silakan hubungi admin terlebih dahulu untuk konfirmasi jangkauan dan ketersediaan layanan.</p>
+          <ul class="check-list">
+            <li>Melayani servis mobil dan motor</li>
+            <li>Spesialis pemeriksaan kaki-kaki mobil</li>
+            <li>Informasi layanan melalui empat kontak admin WhatsApp</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="layanan">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Layanan Bengkel</span>
+          <h2>Yang Bisa Kami Bantu</h2>
+          <p>Solusi perawatan dan perbaikan kendaraan sesuai kebutuhan Anda.</p>
+        </div>
+        <div class="cards">
+          <article class="service-card"><div class="service-icon">🚗</div><h3>Servis Mobil</h3><p>Menerima perbaikan berbagai jenis kerusakan mobil.</p></article>
+          <article class="service-card"><div class="service-icon">🔧</div><h3>Spesialis Kaki-Kaki</h3><p>Pemeriksaan dan perbaikan bagian kaki-kaki mobil.</p></article>
+          <article class="service-card"><div class="service-icon">🏍️</div><h3>Servis Motor</h3><p>Melayani servis dan perawatan berbagai jenis motor.</p></article>
+          <article class="service-card"><div class="service-icon">🧰</div><h3>Servis Panggilan</h3><p>Layanan panggilan tersedia 24 jam berdasarkan konfirmasi jangkauan dan ketersediaan melalui WhatsApp.</p></article>
+          <article class="service-card"><div class="service-icon">🛢️</div><h3>Ganti Oli & Tune Up</h3><p>Perawatan rutin untuk membantu menjaga performa kendaraan.</p></article>
+          <article class="service-card"><div class="service-icon">⚙️</div><h3>Pemeriksaan Kendaraan</h3><p>Pemeriksaan kondisi kendaraan untuk mengetahui kebutuhan perbaikan.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="keunggulan">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Kenapa Memilih Kami</span>
+          <h2>Layanan yang Jelas dan Mudah Dihubungi</h2>
+          <p>Informasi layanan dan kontak bengkel tersedia agar Anda lebih mudah mengatur kebutuhan servis.</p>
+        </div>
+        <div class="why-grid">
+          <article class="why-card"><h3>Fokus Kaki-Kaki Mobil</h3><p>Layanan pemeriksaan dan perbaikan kaki-kaki menjadi salah satu fokus bengkel kami.</p></article>
+          <article class="why-card"><h3>Layanan Mobil & Motor</h3><p>Kebutuhan servis dan perawatan mobil maupun motor dapat dikonsultasikan kepada admin.</p></article>
+          <article class="why-card"><h3>Empat Kontak WhatsApp</h3><p>Pilih salah satu nomor admin untuk menanyakan layanan, jadwal, dan servis panggilan.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="hours-section" id="jam">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Jam Operasional</span>
+          <h2>Jadwal Bengkel</h2>
+          <p>Silakan sesuaikan kunjungan Anda dengan jadwal operasional berikut.</p>
+        </div>
+        <div class="hours-box">
+          <div class="hour-row"><strong>Senin – Sabtu</strong><span>08.00 – 17.00</span></div>
+          <div class="hour-row"><strong>Minggu</strong><span>08.30 – 16.00</span></div>
+          <div class="hours-note">📞 Servis panggilan tersedia 24 jam melalui konfirmasi WhatsApp. Jangkauan dan ketersediaan perlu dikonfirmasi terlebih dahulu.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">FAQ</span>
+          <h2>Pertanyaan yang Sering Diajukan</h2>
+          <p>Informasi singkat sebelum Anda menghubungi bengkel.</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item"><summary>Di mana lokasi Bengkel Jaya Perkasa?</summary><div class="faq-answer">Bengkel Jaya Perkasa berlokasi di Pengasinan, Bekasi Timur. Anda dapat membuka petunjuk arah melalui tombol Google Maps di bagian kontak.</div></details>
+          <details class="faq-item"><summary>Apa saja layanan yang tersedia?</summary><div class="faq-answer">Layanan yang tercantum meliputi servis mobil, spesialis kaki-kaki, servis motor, servis panggilan, ganti oli, tune up, dan pemeriksaan kendaraan.</div></details>
+          <details class="faq-item"><summary>Apakah tersedia servis panggilan 24 jam?</summary><div class="faq-answer">Layanan servis panggilan tersedia 24 jam melalui konfirmasi WhatsApp. Silakan hubungi admin untuk memastikan jangkauan dan ketersediaannya.</div></details>
+          <details class="faq-item"><summary>Bagaimana cara menghubungi admin?</summary><div class="faq-answer">Tekan tombol WhatsApp Admin, lalu pilih salah satu dari empat nomor admin yang tersedia.</div></details>
+          <details class="faq-item"><summary>Kapan jam operasional bengkel?</summary><div class="faq-answer">Senin sampai Sabtu pukul 08.00–17.00, dan Minggu pukul 08.30–16.00.</div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="emergency">
+      <div class="container">
+        <h2>Kendaraan Bermasalah?</h2>
+        <p>Hubungi admin Bengkel Jaya Perkasa untuk menanyakan layanan bengkel atau konfirmasi servis panggilan.</p>
+        <button class="btn btn-orange" type="button" onclick="toggleWA(true)">💬 Hubungi Admin Sekarang</button>
+      </div>
+    </section>
+
+    <section id="kontak">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Kontak Kami</span>
+          <h2>Temukan dan Hubungi Bengkel</h2>
+          <p>Kami siap membantu menjawab pertanyaan seputar kebutuhan servis kendaraan Anda.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <h3>Alamat Bengkel</h3>
+            <p>Pengasinan, Bekasi Timur</p>
+            <a class="btn btn-dark" href="https://maps.app.goo.gl/k8xNWkSGz7fbjdYS7" target="_blank" rel="noopener noreferrer">Buka Google Maps ↗</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">💬</div>
+            <h3>WhatsApp Admin</h3>
+            <p>Pilih salah satu dari empat nomor admin untuk bertanya atau mengonfirmasi layanan.</p>
+            <button class="btn btn-orange" type="button" onclick="toggleWA(true)">Pilih Nomor WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="waPanel" role="dialog" aria-modal="false" aria-labelledby="waTitle" aria-hidden="true">
+    <h3 id="waTitle">Hubungi Admin Bengkel</h3>
+    <p>Pilih salah satu nomor WhatsApp berikut:</p>
+    <a href="https://wa.me/6285888607978" target="_blank" rel="noopener noreferrer">🟢 Admin 1 — 0858-8860-7978</a>
+    <a href="https://wa.me/6283179675976" target="_blank" rel="noopener noreferrer">🟢 Admin 2 — 0831-7967-5976</a>
+    <a href="https://wa.me/6282318070106" target="_blank" rel="noopener noreferrer">🟢 Admin 3 — 0823-1807-0106</a>
+    <a href="https://wa.me/6287763929909" target="_blank" rel="noopener noreferrer">🟢 Admin 4 — 0877-6392-9909</a>
+    <button class="btn btn-dark panel-close" type="button" onclick="toggleWA(false)">Tutup</button>
   </div>
-  <div class="card">
-   <div class="icon">🏍️</div>
-   <h3>Servis Motor</h3>
-   <p>Melayani servis dan perawatan berbagai jenis motor.</p>
-  </div>
-  <div class="card">
-   <div class="icon">🛠️</div>
-   <h3>Servis Panggilan 24 Jam</h3>
-   <p>Layanan panggilan untuk membantu kebutuhan kendaraan Anda kapan saja. Konfirmasi jangkauan dan ketersediaan melalui WhatsApp.</p>
-  </div>
-  <div class="card">
-   <div class="icon">🛢️</div>
-   <h3>Ganti Oli & Tune Up</h3>
-   <p>Perawatan rutin untuk menjaga performa kendaraan.</p>
-  </div>
-  <div class="card">
-   <div class="icon">⚙️</div>
-   <h3>Pemeriksaan Kendaraan</h3>
-   <p>Pemeriksaan kondisi kendaraan untuk mengetahui kebutuhan perbaikan.</p>
-  </div>
- </div>
-</section>
+  <button class="floating" id="floatingWA" type="button" aria-controls="waPanel" aria-expanded="false" onclick="toggleWA()">💬 WhatsApp Admin</button>
 
-<section class="highlight" id="jam">
- <div class="heading">
-  <h2>Jam Operasional Bengkel</h2>
-  <p>Silakan datang sesuai jadwal operasional kami.</p>
- </div>
- <div class="hours">
-  <div class="hourrow"><strong>Senin - Sabtu</strong><strong>08.00 - 17.00</strong></div>
-  <div class="hourrow"><strong>Minggu</strong><strong>08.30 - 16.00</strong></div>
-  <p style="margin-top:15px;color:#087c4d;font-weight:bold">📞 Servis panggilan tersedia 24 jam melalui konfirmasi WhatsApp.</p>
- </div>
-</section>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div>
+          <a class="brand" href="#home"><span class="brand-mark">🔧</span><span class="brand-name">BENGKEL <span>JAYA PERKASA</span></span></a>
+          <p>Servis mobil, motor, spesialis kaki-kaki, dan layanan servis panggilan di Pengasinan, Bekasi Timur.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#tentang">Tentang Kami</a>
+          <a href="#layanan">Layanan</a>
+          <a href="#jam">Jam Operasional</a>
+          <a href="#kontak">Kontak</a>
+          <a href="https://www.instagram.com/bengkeljayaperkasa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Bengkel Jaya Perkasa">Instagram ↗</a>
+          <a href="https://www.facebook.com/profile.php?id=61591961574904" target="_blank" rel="noopener noreferrer" aria-label="Facebook Bengkel Jaya Perkasa">Facebook ↗</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Bengkel Jaya Perkasa. Hak cipta dilindungi.</span>
+        <span>Pengasinan, Bekasi Timur · Servis Mobil & Motor</span>
+      </div>
+    </div>
+  </footer>
 
-<section class="callout">
- <h2>Butuh Bantuan Darurat?</h2>
- <p>Kendaraan bermasalah di jalan? Hubungi kami untuk menanyakan layanan servis panggilan 24 jam.</p>
- <button class="btn" onclick="toggleWA()">Hubungi Admin Sekarang</button>
-</section>
+  <script>
+    function toggleWA(forceOpen) {
+      const panel = document.getElementById('waPanel');
+      const button = document.getElementById('floatingWA');
+      const isOpen = panel.style.display === 'block';
+      const shouldOpen = typeof forceOpen === 'boolean' ? forceOpen : !isOpen;
+      panel.style.display = shouldOpen ? 'block' : 'none';
+      panel.setAttribute('aria-hidden', String(!shouldOpen));
+      button.setAttribute('aria-expanded', String(shouldOpen));
+    }
 
-<section class="contact" id="kontak">
- <div class="heading">
-  <h2>Hubungi Bengkel Jaya Perkasa</h2>
-  <p>Kami siap membantu kebutuhan servis kendaraan Anda.</p>
- </div>
- <div class="card" style="max-width:600px;margin:auto">
-  <h3>📍 Alamat Bengkel</h3>
-  <p>Pengasinan, Bekasi Timur</p>
-  <br>
-  <a class="btn" href="https://maps.app.goo.gl/k8xNWkSGz7fbjdYS7" target="_blank">📍 Petunjuk Arah Google Maps</a>
-  <br><br>
-  <button class="btn" onclick="toggleWA()">💬 Pilih Nomor WhatsApp</button>
- </div>
-</section>
-</main>
-
-<div id="waPanel">
- <h3>Hubungi Admin Bengkel</h3>
- <p style="font-size:13px;color:#718096">Pilih salah satu nomor WhatsApp:</p>
- <a href="https://wa.me/6285888607978" target="_blank">🟢 Admin 1 - 0858-8860-7978</a>
- <a href="https://wa.me/6283179675976" target="_blank">🟢 Admin 2 - 0831-7967-5976</a>
- <a href="https://wa.me/6282318070106" target="_blank">🟢 Admin 3 - 0823-1807-0106</a>
- <a href="https://wa.me/6287763929909" target="_blank">🟢 Admin 4 - 0877-6392-9909</a>
- <button onclick="toggleWA()" class="btn" style="width:100%">Tutup</button>
-</div>
-
-<button class="floating" onclick="toggleWA()">💬 WhatsApp Admin</button>
-
-<footer>
- © 2026 Bengkel Jaya Perkasa | Pengasinan, Bekasi Timur
- <br>Servis Mobil • Motor • Spesialis Kaki-Kaki • Panggilan 24 Jam
-</footer>
-
-<script>
-function toggleWA(){
- const panel=document.getElementById('waPanel');
- panel.style.display=panel.style.display==='block'?'none':'block';
-}
-</script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', function () {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') toggleWA(false);
+    });
+    document.addEventListener('click', function (event) {
+      const panel = document.getElementById('waPanel');
+      const button = document.getElementById('floatingWA');
+      if (panel.style.display === 'block' && !panel.contains(event.target) && !button.contains(event.target) && !event.target.closest('[onclick*="toggleWA"]')) {
+        toggleWA(false);
+      }
+    });
+  </script>
 </body>
 </html>
