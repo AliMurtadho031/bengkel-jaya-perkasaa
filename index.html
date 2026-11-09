@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#082c55">
+<title>Bengkel Jaya Perkasa - Spesialis Kaki-Kaki</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f3f7fc;color:#18314b;line-height:1.6}
+header{background:#082c55;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-weight:bold;font-size:19px}
+.logo span{color:#50baff}
+nav a{color:white;text-decoration:none;margin:0 9px;font-size:14px}
+.hero{padding:85px 7%;background:linear-gradient(120deg,#082c55,#1266a8);color:white;text-align:center}
+.hero h1{font-size:clamp(32px,6vw,52px);line-height:1.2;margin-bottom:15px}
+.hero h2{color:#65c3ff;font-size:23px;margin-bottom:12px}
+.hero p{max-width:650px;margin:0 auto 25px;color:#e1efff}
+.btn{display:inline-block;background:#0ba5e9;color:white;padding:13px 23px;border-radius:8px;text-decoration:none;font-weight:bold;margin:5px;border:0;cursor:pointer}
+.btn.white{background:white;color:#082c55}
+section{padding:60px 7%}
+.heading{text-align:center;margin-bottom:32px}
+.heading h2{font-size:29px;color:#082c55}
+.heading p{color:#687e94}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.card{background:white;padding:24px;border-radius:13px;box-shadow:0 5px 20px #082c5510}
+.card h3{color:#0b4e83;margin:10px 0}
+.icon{font-size:35px}
+.highlight{background:#e4f1ff}
+.callout{background:#092e54;color:white;text-align:center}
+.callout h2{font-size:30px}
+.callout p{color:#d8eaff;margin:12px auto;max-width:600px}
+.hours{max-width:540px;margin:auto;background:white;color:#173653;padding:25px;border-radius:13px;text-align:left}
+.hourrow{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #e5edf5;gap:12px}
+.contact{background:#edf5fd;text-align:center}
+footer{background:#061c34;color:#d3e3f3;text-align:center;padding:23px;font-size:13px}
+#waPanel{display:none;position:fixed;right:18px;bottom:85px;width:min(320px,calc(100vw - 36px));background:white;padding:20px;border-radius:15px;box-shadow:0 5px 30px #001c3850;z-index:10}
+#waPanel h3{color:#082c55;margin-bottom:10px}
+#waPanel a{display:block;text-decoration:none;color:#087b48;padding:11px;border-bottom:1px solid #e7edf3;font-weight:bold}
+#waPanel a:hover{background:#effaf4}
+.floating{position:fixed;right:18px;bottom:18px;background:#12b96a;color:white;border:0;border-radius:30px;padding:15px 21px;font-weight:bold;box-shadow:0 4px 15px #0003;cursor:pointer;z-index:11}
+@media(max-width:600px){
+ header{justify-content:center;text-align:center}
+ nav{width:100%}
+ nav a{margin:0 6px}
+ section{padding:45px 6%}
+ .hero{padding:65px 6%}
+ .hourrow{font-size:14px}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">🔧 BENGKEL <span>JAYA PERKASA</span></div>
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#layanan">Layanan</a>
+  <a href="#jam">Jam Buka</a>
+  <a href="#kontak">Kontak</a>
+ </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+ <h1>BENGKEL JAYA PERKASA</h1>
+ <h2>Spesialis Kaki-Kaki Mobil</h2>
+ <p>Melayani berbagai jenis kerusakan mobil, servis motor, dan layanan servis panggilan 24 jam. Siap membantu kebutuhan kendaraan Anda!</p>
+ <a href="#layanan" class="btn white">Lihat Layanan</a>
+ <button class="btn" onclick="toggleWA()">💬 Hubungi Admin</button>
+</section>
+
+<section id="layanan">
+ <div class="heading">
+  <h2>Layanan Bengkel Kami</h2>
+  <p>Solusi perawatan dan perbaikan kendaraan Anda.</p>
+ </div>
+ <div class="cards">
+  <div class="card">
+   <div class="icon">🚗</div>
+   <h3>Servis Mobil</h3>
+   <p>Menerima perbaikan berbagai jenis kerusakan mobil.</p>
+  </div>
+  <div class="card">
+   <div class="icon">🔧</div>
+   <h3>Spesialis Kaki-Kaki</h3>
+   <p>Fokus pada pemeriksaan dan perbaikan bagian kaki-kaki mobil.</p>
+  </div>
+  <div class="card">
+   <div class="icon">🏍️</div>
+   <h3>Servis Motor</h3>
+   <p>Melayani servis dan perawatan berbagai jenis motor.</p>
+  </div>
+  <div class="card">
+   <div class="icon">🛠️</div>
+   <h3>Servis Panggilan 24 Jam</h3>
+   <p>Layanan panggilan untuk membantu kebutuhan kendaraan Anda kapan saja. Konfirmasi jangkauan dan ketersediaan melalui WhatsApp.</p>
+  </div>
+  <div class="card">
+   <div class="icon">🛢️</div>
+   <h3>Ganti Oli & Tune Up</h3>
+   <p>Perawatan rutin untuk menjaga performa kendaraan.</p>
+  </div>
+  <div class="card">
+   <div class="icon">⚙️</div>
+   <h3>Pemeriksaan Kendaraan</h3>
+   <p>Pemeriksaan kondisi kendaraan untuk mengetahui kebutuhan perbaikan.</p>
+  </div>
+ </div>
+</section>
+
+<section class="highlight" id="jam">
+ <div class="heading">
+  <h2>Jam Operasional Bengkel</h2>
+  <p>Silakan datang sesuai jadwal operasional kami.</p>
+ </div>
+ <div class="hours">
+  <div class="hourrow"><strong>Senin - Sabtu</strong><strong>08.00 - 17.00</strong></div>
+  <div class="hourrow"><strong>Minggu</strong><strong>08.30 - 16.00</strong></div>
+  <p style="margin-top:15px;color:#087c4d;font-weight:bold">📞 Servis panggilan tersedia 24 jam melalui konfirmasi WhatsApp.</p>
+ </div>
+</section>
+
+<section class="callout">
+ <h2>Butuh Bantuan Darurat?</h2>
+ <p>Kendaraan bermasalah di jalan? Hubungi kami untuk menanyakan layanan servis panggilan 24 jam.</p>
+ <button class="btn" onclick="toggleWA()">Hubungi Admin Sekarang</button>
+</section>
+
+<section class="contact" id="kontak">
+ <div class="heading">
+  <h2>Hubungi Bengkel Jaya Perkasa</h2>
+  <p>Kami siap membantu kebutuhan servis kendaraan Anda.</p>
+ </div>
+ <div class="card" style="max-width:600px;margin:auto">
+  <h3>📍 Alamat Bengkel</h3>
+  <p>Pengasinan, Bekasi Timur</p>
+  <br>
+  <a class="btn" href="https://maps.app.goo.gl/k8xNWkSGz7fbjdYS7" target="_blank">📍 Petunjuk Arah Google Maps</a>
+  <br><br>
+  <button class="btn" onclick="toggleWA()">💬 Pilih Nomor WhatsApp</button>
+ </div>
+</section>
+</main>
+
+<div id="waPanel">
+ <h3>Hubungi Admin Bengkel</h3>
+ <p style="font-size:13px;color:#718096">Pilih salah satu nomor WhatsApp:</p>
+ <a href="https://wa.me/6285888607978" target="_blank">🟢 Admin 1 - 0858-8860-7978</a>
+ <a href="https://wa.me/6283179675976" target="_blank">🟢 Admin 2 - 0831-7967-5976</a>
+ <a href="https://wa.me/6282318070106" target="_blank">🟢 Admin 3 - 0823-1807-0106</a>
+ <a href="https://wa.me/6287763929909" target="_blank">🟢 Admin 4 - 0877-6392-9909</a>
+ <button onclick="toggleWA()" class="btn" style="width:100%">Tutup</button>
+</div>
+
+<button class="floating" onclick="toggleWA()">💬 WhatsApp Admin</button>
+
+<footer>
+ © 2026 Bengkel Jaya Perkasa | Pengasinan, Bekasi Timur
+ <br>Servis Mobil • Motor • Spesialis Kaki-Kaki • Panggilan 24 Jam
+</footer>
+
+<script>
+function toggleWA(){
+ const panel=document.getElementById('waPanel');
+ panel.style.display=panel.style.display==='block'?'none':'block';
+}
+</script>
+</body>
+</html>
