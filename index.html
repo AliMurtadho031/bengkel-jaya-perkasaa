@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#082c55">
-  <meta name="description" content="Bengkel Jaya Perkasa di Pengasinan, Bekasi Timur. Melayani servis mobil, motor, spesialis kaki-kaki, ganti oli, tune up, dan servis panggilan dengan konfirmasi WhatsApp.">
+  <meta name="description" content="Bengkel Jaya Perkasa di Pengasinan, Bekasi Timur. Melayani servis mobil, rekondisi dan perbaikan kaki-kaki, rack steer, body repair, serta home service dengan konfirmasi WhatsApp.">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Bengkel Jaya Perkasa | Spesialis Kaki-Kaki Mobil">
-  <meta property="og:description" content="Layanan servis mobil dan motor di Pengasinan, Bekasi Timur. Hubungi admin kami melalui WhatsApp.">
-  <title>Bengkel Jaya Perkasa | Spesialis Kaki-Kaki Mobil Bekasi Timur</title>
+  <meta property="og:description" content="Servis mobil, perbaikan kaki-kaki, rack steer, body repair, dan home service di Pengasinan, Bekasi Timur.">
+  <title>Bengkel Jaya Perkasa | Spesialis Kaki-Kaki & Perbaikan Mobil Bekasi Timur</title>
   <style>
     :root {
       --navy: #082c55;
@@ -116,6 +117,11 @@
     .contact-card h3 { color: var(--navy); margin-bottom: 8px; }
     .contact-card p { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
     .contact-icon { font-size: 27px; margin-bottom: 10px; }
+    .social-heading { color: var(--navy); font-size: 13px; font-weight: 800; margin: 20px 0 10px; }
+    .social-links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .social-link { display: inline-flex; align-items: center; gap: 9px; padding: 10px 13px; border: 1px solid var(--line); border-radius: 10px; color: var(--navy); text-decoration: none; font-size: 13px; font-weight: 800; transition: background .2s, transform .2s; }
+    .social-link:hover { background: #f3f7fc; transform: translateY(-2px); }
+    .social-link svg { width: 19px; height: 19px; flex: 0 0 19px; }
     .site-footer { background: #061c34; color: #c4d2e1; padding: 35px 0 22px; }
     .footer-main { display: flex; justify-content: space-between; align-items: flex-start; gap: 30px; flex-wrap: wrap; padding-bottom: 25px; }
     .footer-main p { max-width: 400px; color: #91a6bc; font-size: 13px; margin-top: 12px; }
@@ -199,10 +205,10 @@
     <section class="hero" id="home">
       <div class="container">
         <div class="hero-content">
-          <div class="eyebrow">Bengkel Mobil & Motor · Bekasi Timur</div>
+          <div class="eyebrow">Bengkel Mobil · Bekasi Timur</div>
           <h1>Rawat Kendaraan,<br><span>Percayakan pada Kami.</span></h1>
           <h2>Spesialis Kaki-Kaki Mobil</h2>
-          <p>Bengkel Jaya Perkasa melayani servis mobil, servis motor, pemeriksaan kaki-kaki, ganti oli, tune up, dan layanan servis panggilan.</p>
+          <p>Bengkel Jaya Perkasa melayani servis mobil, rekondisi dan perbaikan kaki-kaki, rekondisi dan perbaikan rack steer, body repair, serta home service.</p>
           <div class="hero-actions">
             <a class="btn btn-orange" href="#layanan">Lihat Layanan <span aria-hidden="true">→</span></a>
             <button class="btn btn-outline" type="button" onclick="toggleWA(true)">💬 Hubungi Admin</button>
@@ -214,7 +220,7 @@
     <div class="trust-strip">
       <div class="container trust-grid">
         <div class="trust-item"><strong>Spesialis Kaki-Kaki</strong><span>Fokus pemeriksaan dan perbaikan</span></div>
-        <div class="trust-item"><strong>Mobil & Motor</strong><span>Layanan perawatan kendaraan</span></div>
+        <div class="trust-item"><strong>Spesialis Perbaikan Mobil</strong><span>Perawatan dan perbaikan kendaraan</span></div>
         <div class="trust-item"><strong>Pengasinan, Bekasi Timur</strong><span>Lokasi bengkel</span></div>
       </div>
     </div>
@@ -228,12 +234,12 @@
         <div class="about-copy">
           <span class="section-kicker">Tentang Kami</span>
           <h2>Solusi perawatan kendaraan Anda.</h2>
-          <p>Bengkel Jaya Perkasa berlokasi di Pengasinan, Bekasi Timur. Kami melayani kebutuhan servis dan perawatan mobil maupun motor, dengan fokus layanan pada pemeriksaan dan perbaikan kaki-kaki mobil.</p>
+          <p>Bengkel Jaya Perkasa berlokasi di Pengasinan, Bekasi Timur. Kami melayani kebutuhan servis dan perawatan mobil, dengan fokus pada rekondisi dan perbaikan kaki-kaki, rack steer, serta body repair.</p>
           <p>Untuk kebutuhan servis panggilan, silakan hubungi admin terlebih dahulu untuk konfirmasi jangkauan dan ketersediaan layanan.</p>
           <ul class="check-list">
-            <li>Melayani servis mobil dan motor</li>
+            <li>Melayani servis dan perbaikan mobil</li>
             <li>Spesialis pemeriksaan kaki-kaki mobil</li>
-            <li>Informasi layanan melalui empat kontak admin WhatsApp</li>
+            <li>Informasi layanan melalui lima kontak admin WhatsApp</li>
           </ul>
         </div>
       </div>
@@ -248,9 +254,11 @@
         </div>
         <div class="cards">
           <article class="service-card"><div class="service-icon">🚗</div><h3>Servis Mobil</h3><p>Menerima perbaikan berbagai jenis kerusakan mobil.</p></article>
-          <article class="service-card"><div class="service-icon">🔧</div><h3>Spesialis Kaki-Kaki</h3><p>Pemeriksaan dan perbaikan bagian kaki-kaki mobil.</p></article>
-          <article class="service-card"><div class="service-icon">🏍️</div><h3>Servis Motor</h3><p>Melayani servis dan perawatan berbagai jenis motor.</p></article>
-          <article class="service-card"><div class="service-icon">🧰</div><h3>Servis Panggilan</h3><p>Layanan panggilan tersedia 24 jam berdasarkan konfirmasi jangkauan dan ketersediaan melalui WhatsApp.</p></article>
+          <article class="service-card"><div class="service-icon">🔧</div><h3>Spesialis Kaki-Kaki</h3><p>Rekondisi dan perbaikan komponen kaki-kaki mobil sesuai hasil pemeriksaan.</p></article>
+          <article class="service-card"><div class="service-icon">🛠️</div><h3>Rekondisi & Perbaikan Kaki-Kaki</h3><p>Penanganan dan perbaikan komponen kaki-kaki mobil sesuai kondisi kendaraan.</p></article>
+          <article class="service-card"><div class="service-icon">⚙️</div><h3>Rekondisi & Perbaikan Rack Steer</h3><p>Pemeriksaan, rekondisi, dan perbaikan rack steer untuk membantu mengembalikan fungsi kemudi.</p></article>
+          <article class="service-card"><div class="service-icon">🚘</div><h3>Body Repair</h3><p>Perbaikan bodi mobil yang mengalami penyok, goresan, atau kerusakan lainnya.</p></article>
+          <article class="service-card"><div class="service-icon">🏠</div><h3>Home Service</h3><p>Layanan servis panggilan ke lokasi pelanggan. Hubungi admin untuk konfirmasi jangkauan dan ketersediaan.</p></article>
           <article class="service-card"><div class="service-icon">🛢️</div><h3>Ganti Oli & Tune Up</h3><p>Perawatan rutin untuk membantu menjaga performa kendaraan.</p></article>
           <article class="service-card"><div class="service-icon">⚙️</div><h3>Pemeriksaan Kendaraan</h3><p>Pemeriksaan kondisi kendaraan untuk mengetahui kebutuhan perbaikan.</p></article>
         </div>
@@ -266,8 +274,8 @@
         </div>
         <div class="why-grid">
           <article class="why-card"><h3>Fokus Kaki-Kaki Mobil</h3><p>Layanan pemeriksaan dan perbaikan kaki-kaki menjadi salah satu fokus bengkel kami.</p></article>
-          <article class="why-card"><h3>Layanan Mobil & Motor</h3><p>Kebutuhan servis dan perawatan mobil maupun motor dapat dikonsultasikan kepada admin.</p></article>
-          <article class="why-card"><h3>Empat Kontak WhatsApp</h3><p>Pilih salah satu nomor admin untuk menanyakan layanan, jadwal, dan servis panggilan.</p></article>
+          <article class="why-card"><h3>Layanan Perbaikan Mobil</h3><p>Konsultasikan kebutuhan servis, kaki-kaki, rack steer, body repair, dan home service kepada admin.</p></article>
+          <article class="why-card"><h3>Lima Kontak WhatsApp</h3><p>Pilih salah satu dari lima nomor admin untuk menanyakan layanan, jadwal, dan home service.</p></article>
         </div>
       </div>
     </section>
@@ -296,9 +304,9 @@
         </div>
         <div class="faq-list">
           <details class="faq-item"><summary>Di mana lokasi Bengkel Jaya Perkasa?</summary><div class="faq-answer">Bengkel Jaya Perkasa berlokasi di Pengasinan, Bekasi Timur. Anda dapat membuka petunjuk arah melalui tombol Google Maps di bagian kontak.</div></details>
-          <details class="faq-item"><summary>Apa saja layanan yang tersedia?</summary><div class="faq-answer">Layanan yang tercantum meliputi servis mobil, spesialis kaki-kaki, servis motor, servis panggilan, ganti oli, tune up, dan pemeriksaan kendaraan.</div></details>
+          <details class="faq-item"><summary>Apa saja layanan yang tersedia?</summary><div class="faq-answer">Layanan kami meliputi servis mobil, rekondisi dan perbaikan kaki-kaki, rekondisi dan perbaikan rack steer, body repair, home service, ganti oli, tune up, dan pemeriksaan kendaraan.</div></details>
           <details class="faq-item"><summary>Apakah tersedia servis panggilan 24 jam?</summary><div class="faq-answer">Layanan servis panggilan tersedia 24 jam melalui konfirmasi WhatsApp. Silakan hubungi admin untuk memastikan jangkauan dan ketersediaannya.</div></details>
-          <details class="faq-item"><summary>Bagaimana cara menghubungi admin?</summary><div class="faq-answer">Tekan tombol WhatsApp Admin, lalu pilih salah satu dari empat nomor admin yang tersedia.</div></details>
+          <details class="faq-item"><summary>Bagaimana cara menghubungi admin?</summary><div class="faq-answer">Tekan tombol WhatsApp Admin, lalu pilih salah satu dari lima nomor admin yang tersedia.</div></details>
           <details class="faq-item"><summary>Kapan jam operasional bengkel?</summary><div class="faq-answer">Senin sampai Sabtu pukul 08.00–17.00, dan Minggu pukul 08.30–16.00.</div></details>
         </div>
       </div>
@@ -324,13 +332,24 @@
             <div class="contact-icon">📍</div>
             <h3>Alamat Bengkel</h3>
             <p>Pengasinan, Bekasi Timur</p>
-            <a class="btn btn-dark" href="https://maps.app.goo.gl/k8xNWkSGz7fbjdYS7" target="_blank" rel="noopener noreferrer">Buka Google Maps ↗</a>
+            <a class="btn btn-dark" href="https://maps.app.goo.gl/k8xNWkSGz7fbjdYS7" target="_blank" rel="noopener noreferrer">Buka Google Maps ↗️</a>
           </div>
           <div class="contact-card">
             <div class="contact-icon">💬</div>
             <h3>WhatsApp Admin</h3>
-            <p>Pilih salah satu dari empat nomor admin untuk bertanya atau mengonfirmasi layanan.</p>
+            <p>Pilih salah satu dari lima nomor admin untuk bertanya atau mengonfirmasi layanan.</p>
             <button class="btn btn-orange" type="button" onclick="toggleWA(true)">Pilih Nomor WhatsApp</button>
+            <div class="social-heading">Ikuti Media Sosial Kami</div>
+            <div class="social-links">
+              <a class="social-link" href="https://www.instagram.com/bengkeljayaperkasa/" target="_blank" rel="noopener noreferrer" aria-label="Kunjungi Instagram Bengkel Jaya Perkasa">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#d9468f" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="#d9468f" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="#d9468f"/></svg>
+                Instagram
+              </a>
+              <a class="social-link" href="https://www.facebook.com/profile.php?id=61591961574904" target="_blank" rel="noopener noreferrer" aria-label="Kunjungi Facebook Bengkel Jaya Perkasa">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1877f2" d="M13.4 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.2V13H10v8h3.4Z"/></svg>
+                Facebook
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -354,20 +373,20 @@
       <div class="footer-main">
         <div>
           <a class="brand" href="#home"><span class="brand-mark">🔧</span><span class="brand-name">BENGKEL <span>JAYA PERKASA</span></span></a>
-          <p>Servis mobil, motor, spesialis kaki-kaki, dan layanan servis panggilan di Pengasinan, Bekasi Timur.</p>
+          <p>Servis mobil, rekondisi kaki-kaki dan rack steer, body repair, serta home service di Pengasinan, Bekasi Timur.</p>
         </div>
         <div class="footer-links">
           <a href="#tentang">Tentang Kami</a>
           <a href="#layanan">Layanan</a>
           <a href="#jam">Jam Operasional</a>
           <a href="#kontak">Kontak</a>
-          <a href="https://www.instagram.com/bengkeljayaperkasa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Bengkel Jaya Perkasa">Instagram ↗</a>
-          <a href="https://www.facebook.com/profile.php?id=61591961574904" target="_blank" rel="noopener noreferrer" aria-label="Facebook Bengkel Jaya Perkasa">Facebook ↗</a>
+          <a href="https://www.instagram.com/bengkeljayaperkasa/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Bengkel Jaya Perkasa">Instagram ↗️</a>
+          <a href="https://www.facebook.com/profile.php?id=61591961574904" target="_blank" rel="noopener noreferrer" aria-label="Facebook Bengkel Jaya Perkasa">Facebook ↗️</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Bengkel Jaya Perkasa. Hak cipta dilindungi.</span>
-        <span>Pengasinan, Bekasi Timur · Servis Mobil & Motor</span>
+        <span>©️ 2026 Bengkel Jaya Perkasa. Hak cipta dilindungi.</span>
+        <span>Pengasinan, Bekasi Timur · Spesialis Perbaikan Mobil</span>
       </div>
     </div>
   </footer>
